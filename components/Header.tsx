@@ -17,31 +17,31 @@ export default function Header() {
     )
   }
 
-  return (
-    <header className={classes.header}>
-      <Container size="md" className={classes.inner}>
-        <div>
-          <a href="https://github.com/0x5c0f/UptimeFlare" target="_blank">
-            <Text
-              size="xl"
-              span
-              fw={700}
-              variant="gradient"
-              gradient={{ from: 'blue', to: 'cyan', deg: 90 }}
-            >
-              UptimeFlare
-            </Text>
-          </a>
-        </div>
+    return (
+      <header className={classes.header}>
+        <Container size="md" className={classes.inner}>
+          <div>
+            <a href="https://github.com/0x5c0f/UptimeFlare" style={{ textDecoration: 'none' }}  target="_blank">
+              <Text
+                size="xl"
+                span
+                fw={700}
+                variant="gradient"
+                gradient={{ from: 'blue', to: 'cyan', deg: 90 }}
+              >
+                UptimeFlare
+              </Text>
+            </a>
+          </div>
 
-        <Group gap={5} visibleFrom="sm">
-          {pageConfig.links.map(linkToElement)}
-        </Group>
+          <Group gap={5} visibleFrom="sm">
+            {pageConfig.links.map(linkToElement)}
+          </Group>
 
-        <Group gap={5} hiddenFrom="sm">
-          {pageConfig.links.filter((link) => (link as any).highlight).map(linkToElement)}
-        </Group>
-      </Container>
-    </header>
-  )
-}
+          <Group gap={5} hiddenFrom="sm">
+            {pageConfig.links.filter((link) => (link as any).highlight).map(linkToElement)}
+          </Group>
+        </Container>
+      </header>
+    )
+  }
