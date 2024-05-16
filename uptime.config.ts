@@ -1,11 +1,11 @@
 const pageConfig = {
   // Title for your status page
-  title: "lyc8503's Status Page",
+  title: "0x5c0f's Status Page",
   // Links shown at the header of your status page, could set `highlight` to `true`
   links: [
-    { link: 'https://github.com/lyc8503', label: 'GitHub' },
-    { link: 'https://blog.lyc8503.site/', label: 'Blog' },
-    { link: 'mailto:me@lyc8503.site', label: 'Email Me', highlight: true },
+    { link: 'https://github.com/0x5c0f', label: 'GitHub' },
+    { link: 'https://blog.0x5c0f.cc', label: 'Blog' },
+    { link: 'mailto:mail@0x5c0f.cc', label: 'Email Me', highlight: true },
   ],
 }
 
@@ -16,46 +16,89 @@ const workerConfig = {
   monitors: [
     // Example HTTP Monitor
     {
-      // `id` should be unique, history will be kept if the `id` remains constant
-      id: 'foo_monitor',
-      // `name` is used at status page and callback message
-      name: 'My API Monitor',
-      // `method` should be a valid HTTP Method
-      method: 'POST',
-      // `target` is a valid URL
-      target: 'https://example.com',
-      // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
-      tooltip: 'This is a tooltip for this monitor',
-      // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
-      statusPageLink: 'https://example.com',
-      // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
+      id: 'tools',
+      name: '主页',
+      method: 'GET',
+      target: 'https://tools.0x5c0f.cc',
+      // 鼠标移动上去后显示的内容
+      tooltip: '个人主页(Aliyun) - https://tools.0x5c0f.cc',
+      // 状态页面可以点击的地址
+      statusPageLink: 'https://tools.0x5c0f.cc',
       expectedCodes: [200],
-      // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
       timeout: 10000,
-      // [OPTIONAL] headers to be sent
       headers: {
-        'User-Agent': 'Uptimeflare',
-        Authorization: 'Bearer YOUR_TOKEN_HERE',
+        'User-Agent': 'Uptimeflare for Cloudflare',
+        // Authorization: 'Bearer YOUR_TOKEN_HERE',
       },
       // [OPTIONAL] body to be sent
-      body: 'Hello, world!',
-      // [OPTIONAL] if specified, the response must contains the keyword to be considered as operational.
-      responseKeyword: 'success',
-      // [OPTIONAL] if specified, the check will run in your specified region,
-      // refer to docs https://github.com/lyc8503/UptimeFlare/wiki/Geo-specific-checks-setup before setting this value
-      checkLocationWorkerRoute: 'https://xxx.example.com',
+      // body: 'for cloudflare',
+      // 响应什么内容才代表请求成功
+      // responseKeyword: 'success'
     },
-    // Example TCP Monitor
     {
-      id: 'test_tcp_monitor',
-      name: 'Example TCP Monitor',
-      // `method` should be `TCP_PING` for tcp monitors
-      method: 'TCP_PING',
-      // `target` should be `host:port` for tcp monitors
-      target: '1.2.3.4:22',
-      tooltip: 'My production server SSH',
-      statusPageLink: 'https://example.com',
-      timeout: 5000,
+      id: 'blog',
+      name: '博客',
+      method: 'GET',
+      target: 'https://blog.0x5c0f.cc',
+      tooltip: '博客(Aliyun & Vercel) - https://blog.0x5c0f.cc',
+      statusPageLink: 'https://blog.0x5c0f.cc',
+      expectedCodes: [200],
+      timeout: 10000,
+      headers: {
+        'User-Agent': 'Uptimeflare for Cloudflare',
+      },
+    },
+    {
+      id: 'waline',
+      name: 'Waline 评论系统',
+      method: 'GET',
+      target: 'https://talk.51ac.cc',
+      tooltip: 'Waline 评论系统(Vercel 自建) - https://talk.51ac.cc',
+      statusPageLink: 'https://talk.51ac.cc',
+      expectedCodes: [200],
+      timeout: 10000,
+      headers: {
+        'User-Agent': 'Uptimeflare for Cloudflare',
+      },
+    },
+    {
+      id: 'waline',
+      name: 'tldraw 绘图',
+      method: 'GET',
+      target: 'https://tld.51ac.cc',
+      tooltip: 'tldraw 绘图(Vercel 转发) - 官网: https://www.tldraw.com',
+      statusPageLink: 'https://tld.51ac.cc',
+      expectedCodes: [200],
+      timeout: 10000,
+      headers: {
+        'User-Agent': 'Uptimeflare for Cloudflare',
+      },
+    },
+    {
+      id: 'waline',
+      name: 'Excalidraw+ 绘图',
+      method: 'GET',
+      target: 'https://ed.51ac.cc',
+      tooltip: 'Excalidraw+ 绘图(Vercel 自建) - 官网: https://www.tldraw.com',
+      statusPageLink: 'https://ed.51ac.cc',
+      expectedCodes: [200],
+      timeout: 10000,
+      headers: {
+        'User-Agent': 'Uptimeflare for Cloudflare',
+      },
+    },
+    {
+      id: 'iptools',
+      name: 'IP 工具箱',
+      method: 'GET',
+      target: 'https://ip.51ac.cc',
+      tooltip: 'IP 工具箱(Vercel 自建) - https://ip.51ac.cc',
+      statusPageLink: 'https://ip.51ac.cc',
+      expectedCodes: [200],
+      timeout: 10000,
+      headers: {
+        'User-Agent': 'Uptimeflare for Cloudflare',
+      },
     },
   ],
   callbacks: {
