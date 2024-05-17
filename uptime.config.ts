@@ -16,16 +16,16 @@ const workerConfig = {
   monitors: [
     // Example HTTP Monitor
     {
-      id: 'tools',
+      id: 'foh6bah3',
       name: '主页',
-      method: 'GET',
+      method: 'HEAD',
       target: 'https://tools.0x5c0f.cc',
       // 鼠标移动上去后显示的内容
       tooltip: '个人主页(Aliyun) - https://tools.0x5c0f.cc',
       // 状态页面可以点击的地址
       statusPageLink: 'https://tools.0x5c0f.cc',
       expectedCodes: [200],
-      timeout: 10000,
+      timeout: 30000,
       headers: {
         'User-Agent': 'Uptimeflare for Cloudflare',
         // Authorization: 'Bearer YOUR_TOKEN_HERE',
@@ -36,10 +36,23 @@ const workerConfig = {
       // responseKeyword: 'success'
     },
     {
-      id: 'blog',
+      id: 'ekiajee2',
       name: '博客',
-      method: 'GET',
-      target: 'https://blog.0x5c0f.cc',
+      method: 'HEAD',
+      target: 'http://internal.ali.0x5c0f.cc/about/',
+      tooltip: '博客(Aliyun & Vercel) - https://blog.0x5c0f.cc',
+      statusPageLink: 'https://blog.0x5c0f.cc',
+      expectedCodes: [200],
+      timeout: 30000,
+      headers: {
+        'User-Agent': 'Uptimeflare for Cloudflare',
+      },
+    },
+    {
+      id: 'ohng0eok',
+      name: '博客',
+      method: 'HEAD',
+      target: 'http://internal.vercel.0x5c0f.cc/about/',
       tooltip: '博客(Aliyun & Vercel) - https://blog.0x5c0f.cc',
       statusPageLink: 'https://blog.0x5c0f.cc',
       expectedCodes: [200],
@@ -49,9 +62,9 @@ const workerConfig = {
       },
     },
     {
-      id: 'waline',
+      id: 'iav5iyie',
       name: 'Waline 评论系统',
-      method: 'GET',
+      method: 'HEAD',
       target: 'https://talk.51ac.cc',
       tooltip: 'Waline 评论系统(Vercel 自建) - https://talk.51ac.cc',
       statusPageLink: 'https://talk.51ac.cc',
@@ -62,9 +75,9 @@ const workerConfig = {
       },
     },
     {
-      id: 'waline',
+      id: 'apoh9aif',
       name: 'tldraw 绘图',
-      method: 'GET',
+      method: 'HEAD',
       target: 'https://tld.51ac.cc',
       tooltip: 'tldraw 绘图(Vercel 转发) - 官网: https://www.tldraw.com',
       statusPageLink: 'https://tld.51ac.cc',
@@ -75,9 +88,9 @@ const workerConfig = {
       },
     },
     {
-      id: 'waline',
+      id: 'sheethi8',
       name: 'Excalidraw+ 绘图',
-      method: 'GET',
+      method: 'HEAD',
       target: 'https://ed.51ac.cc',
       tooltip: 'Excalidraw+ 绘图(Vercel 自建) - 官网: https://www.tldraw.com',
       statusPageLink: 'https://ed.51ac.cc',
@@ -88,9 +101,9 @@ const workerConfig = {
       },
     },
     {
-      id: 'iptools',
+      id: 'ohj8ia0u',
       name: 'IP 工具箱',
-      method: 'GET',
+      method: 'HEAD',
       target: 'https://ip.51ac.cc',
       tooltip: 'IP 工具箱(Vercel 自建) - https://ip.51ac.cc',
       statusPageLink: 'https://ip.51ac.cc',
