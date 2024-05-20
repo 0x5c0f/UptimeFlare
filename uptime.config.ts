@@ -17,7 +17,7 @@ const workerConfig = {
     // Example HTTP Monitor
     {
       id: 'foh6bah3',
-      name: '主页',
+      name: '个人主页',
       method: 'HEAD',
       target: 'https://tools.0x5c0f.cc',
       // 鼠标移动上去后显示的内容
@@ -37,10 +37,10 @@ const workerConfig = {
     },
     {
       id: 'ekiajee2',
-      name: '博客',
+      name: '博客(Aliyun)',
       method: 'HEAD',
       target: 'http://internal.ali.0x5c0f.cc/about/',
-      tooltip: '博客(Aliyun) - https://blog.0x5c0f.cc',
+      tooltip: '博客 - https://blog.0x5c0f.cc',
       statusPageLink: 'https://blog.0x5c0f.cc',
       expectedCodes: [200],
       timeout: 30000,
@@ -50,10 +50,10 @@ const workerConfig = {
     },
     {
       id: 'ohng0eok',
-      name: '博客',
+      name: '博客(Vercel)',
       method: 'HEAD',
       target: 'http://internal.vercel.0x5c0f.cc/about/',
-      tooltip: '博客(Vercel) - https://blog.0x5c0f.cc',
+      tooltip: '博客 - https://blog.0x5c0f.cc',
       statusPageLink: 'https://blog.0x5c0f.cc',
       expectedCodes: [200],
       timeout: 10000,
