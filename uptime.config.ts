@@ -100,19 +100,6 @@ const workerConfig = {
         'User-Agent': 'Uptimeflare for Cloudflare',
       },
     },
-    {
-      id: 'ohj8ia0u',
-      name: 'IP 工具箱',
-      method: 'HEAD',
-      target: 'https://ip.51ac.cc',
-      tooltip: 'IP 工具箱(Vercel 自建) - https://ip.51ac.cc',
-      statusPageLink: 'https://ip.51ac.cc',
-      expectedCodes: [200],
-      timeout: 10000,
-      headers: {
-        'User-Agent': 'Uptimeflare for Cloudflare',
-      },
-    },
   ],
   callbacks: {
     onStatusChange: async (
