@@ -100,6 +100,19 @@ const workerConfig = {
         'User-Agent': 'Uptimeflare for Cloudflare',
       },
     },
+    {
+      id: 'rie6loh5',
+      name: 'IT 工具箱',
+      method: 'HEAD',
+      target: 'https://it-tools.51ac.cc',
+      tooltip: 'IT 工具箱(Vercel 自建) - 官网: https://it-tools.tech',
+      statusPageLink: 'https://it-tools.51ac.cc',
+      expectedCodes: [200],
+      timeout: 10000,
+      headers: {
+        'User-Agent': 'Uptimeflare for Cloudflare',
+      },
+    },
   ],
   callbacks: {
     onStatusChange: async (
