@@ -1,132 +1,119 @@
 const pageConfig = {
   // Title for your status page
-  title: "0x5c0f's Status Page",
+  title: "0x5c0f's Status Page"，
   // Links shown at the header of your status page, could set `highlight` to `true`
   links: [
-    { link: 'https://github.com/0x5c0f', label: 'GitHub' },
-    { link: 'https://blog.0x5c0f.cc', label: 'Blog' },
-    { link: 'mailto:mail@0x5c0f.cc', label: 'Email Me', highlight: true },
-  ],
+    { link: 'https://github.com/0x5c0f'， label: 'GitHub' }，
+    { link: 'https://blog.0x5c0f.cc'， label: 'Blog' }，
+    { link: 'mailto:mail@0x5c0f.cc'， label: 'Email Me'， highlight: true }，
+  ]，
 }
 
 const workerConfig = {
-  // Write KV at most every 3 minutes unless the status changed.
-  kvWriteCooldownMinutes: 3,
+  // Write KV at most every 3 分钟之前 unless the status changed.
+  kvWriteCooldownMinutes: 3，
   // Define all your monitors here
   monitors: [
     // Example HTTP Monitor
     {
-      id: 'foh6bah3',
-      name: '个人主页',
-      method: 'HEAD',
-      target: 'https://tools.0x5c0f.cc',
+      id: 'foh6bah3'，
+      name: '个人主页'，
+      method: 'HEAD'，
+      target: 'https://tools.0x5c0f.cc'，
       // 鼠标移动上去后显示的内容
-      tooltip: '个人主页(Aliyun) - https://tools.0x5c0f.cc',
+      tooltip: '个人主页(Aliyun) - https://tools.0x5c0f.cc'，
       // 状态页面可以点击的地址
-      statusPageLink: 'https://tools.0x5c0f.cc',
-      expectedCodes: [200],
-      timeout: 30000,
+      statusPageLink: 'https://tools.0x5c0f.cc'，
+      expectedCodes: [200]，
+      timeout: 30000，
       headers: {
-        'User-Agent': 'Uptimeflare for Cloudflare',
+        'User-Agent': 'Uptimeflare for Cloudflare'，
         // Authorization: 'Bearer YOUR_TOKEN_HERE',
-      },
+      }，
       // [OPTIONAL] body to be sent
       // body: 'for cloudflare',
       // 响应什么内容才代表请求成功
       // responseKeyword: 'success'
-    },
+    }，
     {
-      id: 'ekiajee2',
-      name: '博客(Aliyun)',
-      method: 'HEAD',
-      target: 'http://internal.ali.0x5c0f.cc/about/',
-      tooltip: '博客 - https://blog.0x5c0f.cc',
-      statusPageLink: 'https://blog.0x5c0f.cc',
-      expectedCodes: [200],
-      timeout: 30000,
+      id: 'ekiajee2'，
+      name: '博客(Aliyun)'，
+      method: 'HEAD'，
+      target: 'http://internal.ali.0x5c0f.cc/about/'，
+      tooltip: '博客 - https://blog.0x5c0f.cc'，
+      statusPageLink: 'https://blog.0x5c0f.cc'，
+      expectedCodes: [200]，
+      timeout: 30000，
       headers: {
-        'User-Agent': 'Uptimeflare for Cloudflare',
-      },
-    },
+        'User-Agent': 'Uptimeflare for Cloudflare'，
+      }，
+    }，
     {
-      id: 'ohng0eok',
-      name: '博客(Vercel)',
-      method: 'HEAD',
-      target: 'http://internal.vercel.0x5c0f.cc/about/',
-      tooltip: '博客 - https://blog.0x5c0f.cc',
-      statusPageLink: 'https://blog.0x5c0f.cc',
-      expectedCodes: [200],
-      timeout: 10000,
+      id: 'ohng0eok'，
+      name: '博客(Vercel)'，
+      method: 'HEAD'，
+      target: 'http://internal.vercel.0x5c0f.cc/about/'，
+      tooltip: '博客 - https://blog.0x5c0f.cc'，
+      statusPageLink: 'https://blog.0x5c0f.cc'，
+      expectedCodes: [200]，
+      timeout: 10000，
       headers: {
-        'User-Agent': 'Uptimeflare for Cloudflare',
-      },
-    },
+        'User-Agent': 'Uptimeflare for Cloudflare'，
+      }，
+    }，
     {
-      id: 'iav5iyie',
-      name: 'Waline 评论系统',
-      method: 'HEAD',
-      target: 'https://talk.51ac.cc',
-      tooltip: 'Waline 评论系统(Vercel 自建) - https://talk.51ac.cc',
-      statusPageLink: 'https://talk.51ac.cc',
-      expectedCodes: [200],
-      timeout: 10000,
+      id: 'apoh9aif'，
+      name: 'tldraw 绘图'，
+      method: 'HEAD'，
+      target: 'https://tld.51ac.cc'，
+      tooltip: 'tldraw 绘图(Vercel 转发) - 官网: https://www.tldraw.com'，
+      statusPageLink: 'https://tld.51ac.cc'，
+      expectedCodes: [200]，
+      timeout: 10000，
       headers: {
-        'User-Agent': 'Uptimeflare for Cloudflare',
-      },
-    },
+        'User-Agent': 'Uptimeflare for Cloudflare'，
+      }，
+    }，
     {
-      id: 'apoh9aif',
-      name: 'tldraw 绘图',
-      method: 'HEAD',
-      target: 'https://tld.51ac.cc',
-      tooltip: 'tldraw 绘图(Vercel 转发) - 官网: https://www.tldraw.com',
-      statusPageLink: 'https://tld.51ac.cc',
-      expectedCodes: [200],
-      timeout: 10000,
+      id: 'sheethi8'，
+      name: 'Excalidraw+ 绘图'，
+      method: 'HEAD'，
+      target: 'https://ed.51ac.cc'，
+      tooltip: 'Excalidraw+ 绘图(Vercel 自建) - 官网: https://www.tldraw.com'，
+      statusPageLink: 'https://ed.51ac.cc'，
+      expectedCodes: [200]，
+      timeout: 10000，
       headers: {
-        'User-Agent': 'Uptimeflare for Cloudflare',
-      },
-    },
-    {
-      id: 'sheethi8',
-      name: 'Excalidraw+ 绘图',
-      method: 'HEAD',
-      target: 'https://ed.51ac.cc',
-      tooltip: 'Excalidraw+ 绘图(Vercel 自建) - 官网: https://www.tldraw.com',
-      statusPageLink: 'https://ed.51ac.cc',
-      expectedCodes: [200],
-      timeout: 10000,
-      headers: {
-        'User-Agent': 'Uptimeflare for Cloudflare',
-      },
-    },
-  ],
+        'User-Agent': 'Uptimeflare for Cloudflare'，
+      }，
+    }，
+  ]，
   callbacks: {
     onStatusChange: async (
-      env: any,
-      monitor: any,
-      isUp: boolean,
-      timeIncidentStart: number,
-      timeNow: number,
+      env: any，
+      monitor: any，
+      isUp: boolean，
+      timeIncidentStart: number，
+      timeNow: number，
       reason: string
     ) => {
       // This callback will be called when there's a status change for any monitor
       // Write any Typescript code here
 
       // By default, this sends Bark and Telegram notification on every status change if you setup Cloudflare env variables correctly.
-      await notify(env, monitor, isUp, timeIncidentStart, timeNow, reason)
-    },
+      await notify(env， monitor， isUp， timeIncidentStart， timeNow， reason)
+    }，
     onIncident: async (
-      env: any,
-      monitor: any,
-      timeIncidentStart: number,
-      timeNow: number,
+      env: any，
+      monitor: any，
+      timeIncidentStart: number，
+      timeNow: number，
       reason: string
     ) => {
       // This callback will be called EVERY 1 MINTUE if there's an on-going incident for any monitor
       // Write any Typescript code here
-    },
-  },
+    }，
+  }，
 }
 
 // Below is code for sending Telegram & Bark notification
